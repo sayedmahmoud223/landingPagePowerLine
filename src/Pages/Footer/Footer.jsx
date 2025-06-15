@@ -1,204 +1,3 @@
-// import React from "react";
-// import container1 from "../../assets/Container.png";
-// import container2 from "../../assets/Container1.png";
-// import logo from "../../assets/Vector (1).png";
-// import { FaTiktok, FaInstagram } from "react-icons/fa";
-// import { RiTwitterXLine } from "react-icons/ri";
-
-// export default function Footer() {
-//   // دالة للتنقل السلس إلى العنصر باستخدام ID
-//   const scrollToSection = (id) => {
-//     const element = document.getElementById(id);
-//     if (element) {
-//       element.scrollIntoView({ behavior: "smooth" });
-//     }
-//   };
-
-//   return (
-//     <div className="w-full py-6 bg-white m-2">
-//       {/* القسم العلوي */}
-//       <div className="grid grid-cols-12 gap-4 w-[90%] mx-auto">
-//         {/* الصور في الأعلى على الشاشات الصغيرة */}
-//         <div className="col-span-12 flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 md:hidden">
-//           <img
-//             src={container1}
-//             alt="صورة محطة وقود 1"
-//             className="w-full max-w-[150px] h-auto object-contain"
-//           />
-//           <img
-//             src={container2}
-//             alt="صورة محطة وقود 2"
-//             className="w-full max-w-[150px] h-auto object-contain"
-//           />
-//         </div>
-
-//         {/* الروابط والشعار */}
-//         <div className="col-span-12 md:col-span-6">
-//           <div className="p-3 text-center md:text-left">
-//             <img
-//               src={logo}
-//               alt="شعار باور لاين غاز"
-//               className="mx-auto md:mx-0 w-12 h-auto"
-//             />
-//             <p className="font-poppins mt-4 font-bold text-[28px] leading-[120%] capitalize text-Primary-400">
-//               باور لاين غاز
-//             </p>
-//           </div>
-
-//           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 px-4">
-//             <div className="space-y-4 text-center md:text-left">
-//               <button
-//                 onClick={() => scrollToSection("الرئيسية")}
-//                 className="font-poppins font-medium text-[16px] leading-[120%] capitalize text-black hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//               >
-//                 الرئيسية
-//               </button>
-//               <div className="flex flex-col gap-3 mt-4">
-//                 <button
-//                   onClick={() => scrollToSection("خدمة_العملاء")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   خدمة العملاء
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("من نكون")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   الرؤية المستقبلية
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("الفروع")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   فروعنا
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("الأسئلة_الشائعة")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   الأسئلة الشائعة
-//                 </button>
-//               </div>
-//             </div>
-
-//             <div className="space-y-4 text-center md:text-left">
-//               <button
-//                 onClick={() => scrollToSection("من نكون")}
-//                 className="font-poppins font-medium text-[16px] leading-[120%] capitalize text-black hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//               >
-//                 من نحن
-//               </button>
-//               <div className="flex flex-col gap-3 mt-4">
-//                 <button
-//                   onClick={() => scrollToSection("الرئيسية")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   عن الشركة
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("من نكون")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   رؤيتنا
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("من نكون")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   رسالتنا
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("من نكون")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   أهدافنا
-//                 </button>
-//               </div>
-//             </div>
-
-//             <div className="space-y-4 text-center md:text-left">
-//               <button
-//                 onClick={() => scrollToSection("الخدمات")}
-//                 className="font-poppins font-medium text-[16px] leading-[120%] capitalize text-black hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//               >
-//                 خدماتنا
-//               </button>
-//               <div className="flex flex-col gap-3 mt-4">
-//                 <button
-//                   onClick={() => scrollToSection("الخدمات")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   كافيهات ومطاعم
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("الخدمات")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   مساجد ودورات مياه
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("الخدمات")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   وقود
-//                 </button>
-//                 <button
-//                   onClick={() => scrollToSection("الخدمات")}
-//                   className="font-poppins text-Neutral-600 font-medium text-[14px] leading-[120%] capitalize hover:text-Primary-400 transition-colors duration-200 cursor-pointer w-full block"
-//                 >
-//                   تغيير زيوت وإطارات
-//                 </button>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* الصور على الشاشات الكبيرة */}
-//         <div className="col-span-12 md:col-span-6 flex flex-col md:flex-row justify-center items-center gap-2 mt-12 md:mt-0 hidden md:flex">
-//           <img
-//             src={container1}
-//             alt="صورة محطة وقود 1"
-//             className="w-full max-w-[300px] h-auto object-contain"
-//           />
-//           <img
-//             src={container2}
-//             alt="صورة محطة وقود 2"
-//             className="w-full max-w-[300px] h-auto object-contain"
-//           />
-//         </div>
-
-//         {/* أيقونات التواصل الاجتماعي في القسم العلوي */}
-//         <div className="col-span-12 flex justify-center gap-4 mt-8">
-//           <a
-//             href="https://www.tiktok.com/@powerline.fuel?_t=ZS-8xAzDNxXo7E&_r=1"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="bg-Primary-400 flex justify-center items-center rounded-full w-[30px] h-[30px] hover:bg-Primary-500 transition-transform duration-200 transform hover:scale-110"
-//           >
-//             <FaTiktok className="text-white" />
-//           </a>
-//           <a
-//             href="https://www.instagram.com/powerline.fuel?igsh=MWF3eW1vNW93aThzcg=="
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="bg-Primary-400 flex justify-center items-center rounded-full w-[30px] h-[30px] hover:bg-Primary-500 transition-transform duration-200 transform hover:scale-110"
-//           >
-//             <FaInstagram className="text-white" />
-//           </a>
-//           <a
-//             href="https://x.com/powerlinefuel?s=21"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="bg-Primary-400 flex justify-center items-center rounded-full w-[30px] h-[30px] hover:bg-Primary-500 transition-transform duration-200 transform hover:scale-110"
-//           >
-//             <RiTwitterXLine className="text-white" />
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 import React, { useState } from "react";
 import container1 from "../../assets/Container.png";
 import container2 from "../../assets/Container1.png";
@@ -218,9 +17,18 @@ export default function Footer() {
   // حالة للتحكم في إظهار/إخفاء سياسة الخصوصية
   const [showPrivacyPolicy, setShowPrivacyPolicy] = useState(false);
 
-  // دالة لتبديل إظهار/إخفاء سياسة الخصوصية
+  // دالة لتبديل إظهار/إخفاء سياسة الخصوصية مع السكرول
   const togglePrivacyPolicy = () => {
-    setShowPrivacyPolicy(!showPrivacyPolicy);
+    setShowPrivacyPolicy((prev) => {
+      const newState = !prev;
+      if (newState) {
+        // نستخدم setTimeout عشان نضمن إن المحتوى يظهر الأول قبل السكرول
+        setTimeout(() => {
+          scrollToSection("privacy-policy");
+        }, 300);
+      }
+      return newState;
+    });
   };
 
   return (
@@ -417,7 +225,7 @@ export default function Footer() {
 
           {/* قسم سياسة الخصوصية */}
           {showPrivacyPolicy && (
-            <div className="mt-6 p-6 bg-Neutral-100 rounded-lg text-right">
+            <div id="privacy-policy" className="mt-6 p-6 bg-Neutral-100 rounded-lg text-right">
               <h2 className="font-poppins font-bold text-[24px] text-Primary-400 mb-4">سياسة الخصوصية</h2>
               <p className="font-poppins text-Neutral-600 text-[14px] mb-2"><strong>تاريخ السريان:</strong> 13 يونيو 2025</p>
               <p className="font-poppins text-Neutral-600 text-[14px] mb-4">
@@ -505,7 +313,7 @@ export default function Footer() {
                 <br />
                 📧 info.powelinegaz.sa
                 <br />
-                📞 (+966512345678)
+                📞 (920020132)
                 <br />
                 📍 مقر شركة باورلاين، الطائف، المملكة العربية السعودية
               </p>

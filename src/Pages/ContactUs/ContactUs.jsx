@@ -426,7 +426,7 @@ export default function ContactUs() {
   });
 
   return (
-    <div id="تواصل-معنا" className="p-4 sm:p-8 md:p-12 bg-white">
+    <div id="تواصل معنا" className="p-4 sm:p-8 md:p-12 bg-white">
       <h1 className="font-poppins py-4 font-semibold text-3xl sm:text-4xl md:text-5xl leading-[100%] tracking-[0%] text-center capitalize">
         تواصلوا <span className="text-Primary-400">معنا</span>
       </h1>
