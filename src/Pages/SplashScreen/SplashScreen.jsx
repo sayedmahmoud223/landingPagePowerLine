@@ -18,7 +18,7 @@ export default function SplashScreen() {
   return (
     <div
       className="fixed inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out"
-      style={{ backgroundColor: "#b67350" }}
+      style={{ backgroundColor: "#fdf7eb" }}
     >
       <div
         className="transform transition-all duration-1000 ease-in-out opacity-100 scale-100"

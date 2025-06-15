@@ -377,23 +377,23 @@ import { FaTiktok, FaInstagram } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 
 // Validation schema using Yup
-const validationSchema = Yup.object({
-  firstName: Yup.string()
-    .required("الاسم الأول مطلوب")
-    .min(2, "الاسم الأول يجب أن يكون حرفين على الأقل"),
-  lastName: Yup.string()
-    .required("الاسم الثاني مطلوب")
-    .min(2, "الاسم الثاني يجب أن يكون حرفين على الأقل"),
-  email: Yup.string()
-    .email("البريد الإلكتروني غير صحيح")
-    .required("البريد الإلكتروني مطلوب"),
-  phone: Yup.string()
-    .matches(/^(?:\+966|966)[5-9]\d{8}$/, "رقم الجوال السعودي غير صحيح")
-    .required("رقم الجوال مطلوب"),
-  message: Yup.string()
-    .required("الرسالة مطلوبة")
-    .min(10, "الرسالة يجب أن تكون 10 أحرف على الأقل"),
-});
+// const validationSchema = Yup.object({
+//   firstName: Yup.string()
+//     .required("الاسم الأول مطلوب")
+//     .min(2, "الاسم الأول يجب أن يكون حرفين على الأقل"),
+//   lastName: Yup.string()
+//     .required("الاسم الثاني مطلوب")
+//     .min(2, "الاسم الثاني يجب أن يكون حرفين على الأقل"),
+//   email: Yup.string()
+//     .email("البريد الإلكتروني غير صحيح")
+//     .required("البريد الإلكتروني مطلوب"),
+//   phone: Yup.string()
+//     .matches(/^(?:\+966|966)[5-9]\d{8}$/, "رقم الجوال السعودي غير صحيح")
+//     .required("رقم الجوال مطلوب"),
+//   message: Yup.string()
+//     .required("الرسالة مطلوبة")
+//     .min(10, "الرسالة يجب أن تكون 10 أحرف على الأقل"),
+// });
 
 export default function ContactUs() {
   const [formStatus, setFormStatus] = useState({
@@ -409,7 +409,7 @@ export default function ContactUs() {
       phone: "",
       message: "",
     },
-    validationSchema,
+    // validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setFormStatus({ status: "loading", message: "جاري الإرسال..." });
       try {
